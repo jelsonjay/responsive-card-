@@ -4,36 +4,97 @@ padding: 0;
 box-sizing: border-box;
 }
 :root{
---clr-balck:hsl(0, 0%, 0%);
+--clr-balck:hsl(200, 10%, 2%);
 --clr-carol: hsl(16, 100%, 66%);
 --clr-white: #fff;
+--clr-social: hsl(23, 5%, 68%);
 }
 body{
-display: grid;
-min-height: 100vh;
-line-height: 1.2;
-place-items: center;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+background: linear-gradient(to right top, #65dfc9, #6cdbeb);
 }
 .container{
-/* padding: 50px;
-max-width: 700px;
-margin: auto;
-background-color: coral; */
+display: grid;
+min-height: 100vh;
+line-height: 1.6;
+place-items: center;
 }
 .card{
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-width: 75%;
-max-width: 700px;
+width: 80%;
+max-width: 600px;
 display: flex;
 flex-direction: column;
-background-color: var(--clr-carol);
-color:var(--clr-white);
+background-color: var(--clr-white);
+background: linear-gradient(to right bottom, rgba(255,255,255, 0.6), rgba(255,255,255, 0.3));
+color:var(--clr-balck);
 border-radius: 0.5rem;
 text-align: center;
-padding: 20px;
+padding: 2rem;
 }
+.user-name{
+font-size: 2rem;
+letter-spacing: 2px;
+line-height: 1.2;
+}
+.user-name::after{
+content: "" ;
+display: block;
+height: 0.1rem;
+width: 5rem;
+background-color: var(--clr-carol);
+margin: 0.5rem auto 0.6rem;
+opacity: 0.25;
+}
+.user-role{
+margin: 0;
+font-size: 0.9rem;
+letter-spacing: 2;
+text-transform: uppercase;
+color: var(--clr-balck);
+margin-bottom: 2rem;
+}
+.user-desc{
+color: var(--clr-balck);
+font-weight: 300;
+opacity: 0.5;
+}
+.avatar{
+border-radius: 50%;
+border: 5px solid var(--clr-carol);
+}
+.social-icons{
+display: flex;
+justify-content: space-around;
+list-style: none;
+margin: 0;
+padding: 0;
+width: 150px;
+margin: auto;
+}
+.social-link{
+color: var(--clr-social);
+opacity: 0.5;
+font-size: 1.5rem;
+}
+.social-link:hover,
+.social-link:focus{
+opacity: 1;
+}
+
 img{
-width: 30%;
-height: 10%;
+width: 80%;
+height: 60%;
+}
+
+@media screen and (min-width: 600px){
+.card{
+flex-direction: row;
+}
+.main-info{
+ text-align: left;
+ margin-left: 2rem;
+}
+.user-name::after{
+margin-left: 0;
+}
 }
